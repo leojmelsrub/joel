@@ -3,24 +3,26 @@
 
 :root {
   color-scheme: light dark;
-  --bg: #f7f3ec;
-  --bg-elev: #fbf8f2;
-  --text: #1a1a18;
-  --muted: #5b5852;
-  --accent: #b65b28;
-  --line: #d8d1c6;
-  --shadow: rgba(0, 0, 0, 0.08);
+  --bg: #f6f1e8;
+  --bg-elev: #fff8ef;
+  --text: #1c1a17;
+  --muted: #5a5249;
+  --accent: #c4531e;
+  --accent-soft: #f9c784;
+  --line: #d9cbb8;
+  --shadow: rgba(120, 60, 20, 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #12110f;
-    --bg-elev: #1a1916;
-    --text: #f2efe9;
-    --muted: #b0a89c;
-    --accent: #f0a05c;
-    --line: #2c2924;
-    --shadow: rgba(0, 0, 0, 0.4);
+    --bg: #14110d;
+    --bg-elev: #1e1913;
+    --text: #f6efe5;
+    --muted: #c1b3a3;
+    --accent: #f08b52;
+    --accent-soft: #f4b37a;
+    --line: #3a2f23;
+    --shadow: rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -35,8 +37,8 @@ html {
 body {
   margin: 0;
   font-family: "Source Sans 3", "Helvetica Neue", sans-serif;
-  background: radial-gradient(1200px 900px at 80% -10%, rgba(182, 91, 40, 0.12), transparent 60%),
-    radial-gradient(900px 700px at 10% 10%, rgba(0, 0, 0, 0.05), transparent 55%),
+  background: radial-gradient(1100px 800px at 85% -10%, rgba(196, 83, 30, 0.16), transparent 60%),
+    radial-gradient(800px 650px at 12% 5%, rgba(249, 199, 132, 0.25), transparent 55%),
     var(--bg);
   color: var(--text);
 }
@@ -89,8 +91,8 @@ img {
 }
 
 .btn-primary {
-  background: var(--text);
-  color: var(--bg);
+  background: var(--accent);
+  color: #1c1209;
   border-color: transparent;
   box-shadow: 0 12px 30px var(--shadow);
 }
@@ -111,8 +113,8 @@ img {
   border-radius: 999px;
   border: 1px solid var(--line);
   font-size: 0.85rem;
-  color: var(--muted);
-  background: var(--bg-elev);
+  color: var(--text);
+  background: linear-gradient(120deg, var(--bg-elev), var(--accent-soft));
 }
 
 .reveal {
@@ -131,6 +133,7 @@ img {
   border-left: 0;
   border-right: 0;
   padding: 1.2rem 0;
+  background: linear-gradient(90deg, rgba(249, 199, 132, 0.18), transparent 45%, rgba(196, 83, 30, 0.12));
 }
 
 .ticker {
