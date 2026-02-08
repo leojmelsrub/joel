@@ -1,0 +1,61 @@
+---
+import "../styles/global.css";
+import { SITE } from "../lib/site";
+
+const { title, description, image } = Astro.props;
+const metaTitle = title ? `${title} | ${SITE.name}` : SITE.title;
+const metaDescription = description ?? SITE.description;
+const metaImage = image ?? SITE.image;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={metaDescription} />
+    <meta property="og:title" content={metaTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:image" content={metaImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{metaTitle}</title>
+  </head>
+  <body>
+    <header class="container py-8 flex items-center justify-between">
+      <a class="serif text-xl tracking-wide" href="/">Joel Burslem</a>
+      <nav class="flex items-center gap-6 text-sm uppercase tracking-[0.2em] text-[color:var(--muted)]">
+        <a href="/work">Work</a>
+        <a href="/blueprint">Blueprint</a>
+        <a href="/about">About</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="container py-10 text-sm text-[color:var(--muted)] flex flex-col gap-2">
+      <div class="divider"></div>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <span>Performance follows attitude.</span>
+        <span>Strategic Architect Portfolio.</span>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        const items = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("reveal-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+        items.forEach((item) => observer.observe(item));
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../lib/site";
+---
+<BaseLayout>
+  <section class="container section">
+    <div class="reveal flex flex-col gap-8">
+      <span class="kicker">The Signal</span>
+      <h1 class="serif text-4xl sm:text-6xl leading-tight">
+        Strategy isn't a slide deck. It's a bridge.
+      </h1>
+      <p class="text-lg sm:text-xl text-[color:var(--muted)] max-w-2xl">
+        I help real estate and media companies move from "what we built" to "why it matters."
+      </p>
+      <p class="text-base sm:text-lg max-w-2xl">
+        For over 15 years, I've worked at the intersection of product strategy and digital marketing
+        for brands like Sotheby's International Realty and Bright MLS.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a class="btn btn-primary" href={SITE.ctaPrimary}>Schedule a Strategy Audit</a>
+        <a class="btn" href={SITE.ctaSecondary}>Read the Daily Riff</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ticker">
+    <div class="ticker-track">
+      <span class="ticker-item">WFG</span>
+      <span class="ticker-item">1000watt</span>
+      <span class="ticker-item">Sotheby's</span>
+      <span class="ticker-item">Bright MLS</span>
+      <span class="ticker-item">Inman News</span>
+      <span class="ticker-item">WFG</span>
+      <span class="ticker-item">1000watt</span>
+      <span class="ticker-item">Sotheby's</span>
+      <span class="ticker-item">Bright MLS</span>
+      <span class="ticker-item">Inman News</span>
+    </div>
+  </section>
+
+  <section class="container section grid gap-12">
+    <div class="reveal grid gap-6">
+      <span class="kicker">Distinctive Assets</span>
+      <h2 class="serif text-3xl sm:text-4xl">Strategic clarity with creative lift.</h2>
+      <p class="text-base sm:text-lg text-[color:var(--muted)] max-w-3xl">
+        I specialize in translating complex product ecosystems into clear, human narratives that
+        accelerate adoption, unlock revenue, and align teams around a single trajectory.
+      </p>
+    </div>
+    <div class="reveal grid sm:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl border border-[color:var(--line)] bg-[color:var(--bg-elev)]">
+        <span class="tag">Brevity</span>
+        <h3 class="serif text-2xl mt-4">Remarkable signals</h3>
+        <p class="text-sm mt-3 text-[color:var(--muted)]">
+          Short, punchy insights designed to create momentum and curiosity.
+        </p>
+      </div>
+      <div class="p-6 rounded-2xl border border-[color:var(--line)] bg-[color:var(--bg-elev)]">
+        <span class="tag">Rigor</span>
+        <h3 class="serif text-2xl mt-4">Framework-backed moves</h3>
+        <p class="text-sm mt-3 text-[color:var(--muted)]">
+          Evidence of strategic systems and outcomes, not just opinions.
+        </p>
+      </div>
+      <div class="p-6 rounded-2xl border border-[color:var(--line)] bg-[color:var(--bg-elev)]">
+        <span class="tag">Clarity</span>
+        <h3 class="serif text-2xl mt-4">Creative briefs, not jargon</h3>
+        <p class="text-sm mt-3 text-[color:var(--muted)]">
+          Every move explained with a clear narrative and an outcome.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="About & Archive" description="Background, credentials, and personal signals.">
+  <section class="container section grid gap-8">
+    <div class="reveal flex flex-col gap-4">
+      <span class="kicker">About & Archive</span>
+      <h1 class="serif text-4xl sm:text-5xl">The architect behind the signal.</h1>
+      <p class="text-lg text-[color:var(--muted)] max-w-2xl">
+        Founder of the Future of Real Estate Marketing (FOREM), acquired by Inman News. Former
+        Partner at 1000watt.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="reveal p-6 rounded-2xl border border-[color:var(--line)] bg-[color:var(--bg-elev)]">
+        <h2 class="serif text-2xl">Personal Signal</h2>
+        <p class="mt-3 text-sm text-[color:var(--muted)]">
+          "Performance follows attitude." Board Member and Marketing Lead for Foothills Soccer Club.
+        </p>
+      </div>
+      <div class="reveal p-6 rounded-2xl border border-[color:var(--line)] bg-[color:var(--bg-elev)]">
+        <h2 class="serif text-2xl">Education</h2>
+        <p class="mt-3 text-sm text-[color:var(--muted)]">
+          B.A. Political Science, University of British Columbia.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
