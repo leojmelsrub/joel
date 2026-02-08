@@ -20,15 +20,28 @@ const metaImage = image ?? SITE.image;
     <title>{metaTitle}</title>
   </head>
   <body>
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-[color:var(--bg-elev)] focus:text-[color:var(--text)] focus:px-4 focus:py-2 focus:rounded-full focus:shadow-lg"
+    >
+      Skip to content
+    </a>
     <header class="container py-8 flex items-center justify-between">
       <a class="serif text-xl tracking-wide" href="/">Joel Burslem</a>
       <nav class="flex items-center gap-6 text-sm uppercase tracking-[0.2em] text-[color:var(--muted)]">
         <a href="/work">Work</a>
         <a href="/blueprint">Blueprint</a>
         <a href="/about">About</a>
+        <a
+          class="btn btn-primary text-xs tracking-[0.2em] uppercase"
+          href={SITE.ctaPrimary}
+          aria-label="Schedule a Strategy Audit"
+        >
+          Strategy Audit
+        </a>
       </nav>
     </header>
-    <main>
+    <main id="main-content">
       <slot />
     </main>
     <footer class="container py-10 text-sm text-[color:var(--muted)] flex flex-col gap-2">

@@ -126,22 +126,25 @@ img {
   transform: translateY(0);
 }
 
+.ticker-wrap {
+  border: 1px solid var(--line);
+  border-left: 0;
+  border-right: 0;
+  padding: 1.2rem 0;
+}
+
 .ticker {
   display: flex;
   gap: 2.5rem;
   white-space: nowrap;
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-left: 0;
-  border-right: 0;
-  padding: 1.2rem 0;
   position: relative;
 }
 
 .ticker-track {
   display: inline-flex;
   gap: 2.5rem;
-  animation: ticker 18s linear infinite;
+  animation: ticker 26s linear infinite;
 }
 
 .ticker-item {

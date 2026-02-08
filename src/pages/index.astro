@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE } from "../lib/site";
 ---
 <BaseLayout>
-  <section class="container section">
+  <section id="signal" class="container section">
     <div class="reveal flex flex-col gap-8">
       <span class="kicker">The Signal</span>
       <h1 class="serif text-4xl sm:text-6xl leading-tight">
@@ -17,15 +17,26 @@ import { SITE } from "../lib/site";
         rebuilds, UX, and launch work for Sotheby's International Realty, Bright MLS, WFG,
         Inman News, and 1000watt.
       </p>
+      <ul class="grid gap-2 text-sm text-[color:var(--muted)] max-w-2xl">
+        <li>Translate technical products into customer-friendly stories.</li>
+        <li>Align teams on positioning, messaging, and launch plans.</li>
+        <li>Deliver digital experiences that feel premium and easy to use.</li>
+      </ul>
       <div class="flex flex-wrap gap-4">
         <a class="btn btn-primary" href={SITE.ctaPrimary}>Schedule a Strategy Audit</a>
         <a class="btn" href={SITE.ctaSecondary}>Read the Daily Riff</a>
       </div>
+      <p class="text-sm text-[color:var(--muted)]">
+        Trusted by teams at Sotheby's, Bright MLS, WFG, Inman News, and 1000watt.
+      </p>
     </div>
   </section>
 
-  <section class="ticker">
-    <div class="ticker-track">
+  <section class="ticker-wrap" aria-label="Trusted by">
+    <div class="container">
+      <span class="kicker">Trusted by</span>
+      <div class="ticker">
+        <div class="ticker-track">
       <span class="ticker-item">WFG</span>
       <span class="ticker-item">1000watt</span>
       <span class="ticker-item">Sotheby's</span>
@@ -36,10 +47,12 @@ import { SITE } from "../lib/site";
       <span class="ticker-item">Sotheby's</span>
       <span class="ticker-item">Bright MLS</span>
       <span class="ticker-item">Inman News</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="container section grid gap-12">
+  <section id="assets" class="container section grid gap-12">
     <div class="reveal grid gap-6">
       <span class="kicker">Distinctive Assets</span>
       <h2 class="serif text-3xl sm:text-4xl">Clear strategy, strong creative, measurable results.</h2>
