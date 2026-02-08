@@ -37,6 +37,11 @@ html {
 body {
   margin: 0;
   font-family: "Source Sans 3", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern", "liga", "calt";
   background: radial-gradient(1100px 800px at 85% -10%, rgba(196, 83, 30, 0.16), transparent 60%),
     radial-gradient(800px 650px at 12% 5%, rgba(249, 199, 132, 0.25), transparent 55%),
     var(--bg);
@@ -55,6 +60,8 @@ img {
 
 .serif {
   font-family: "Fraunces", "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .container {
@@ -63,14 +70,37 @@ img {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 5.5rem 0;
 }
 
 .kicker {
-  font-size: 0.85rem;
-  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  letter-spacing: 0.26em;
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.12;
+}
+
+h1.serif {
+  font-size: clamp(2.6rem, 3.6vw + 1.4rem, 4.1rem);
+}
+
+h2.serif {
+  font-size: clamp(1.8rem, 1.6vw + 1.2rem, 2.6rem);
+}
+
+h3.serif {
+  font-size: clamp(1.3rem, 0.8vw + 1.1rem, 1.8rem);
+}
+
+p {
+  letter-spacing: 0.01em;
 }
 
 .divider {
@@ -115,6 +145,16 @@ img {
   font-size: 0.85rem;
   color: var(--text);
   background: linear-gradient(120deg, var(--bg-elev), var(--accent-soft));
+}
+
+.icon-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 0.35rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, var(--accent-soft), var(--accent));
+  box-shadow: 0 0 0 4px rgba(196, 83, 30, 0.12);
+  flex: 0 0 auto;
 }
 
 .portrait-frame {
