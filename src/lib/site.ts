@@ -2,7 +2,7 @@ export const SITE = {
   name: "Joel Burslem",
   title: "Joel Burslem | Strategic Architect & Marketing Strategist",
   description:
-    "Real estate marketing strategist focused on product strategy, digital transformation, UX, and go-to-market for brands like Sotheby's International Realty.",
+    "Senior Product Activation Manager at Zillow focused on agent marketing, product marketing, content, and go-to-market in real estate tech.",
   url: "https://example.com",
   image: "/og.jpg",
   ctaPrimary: "#",
