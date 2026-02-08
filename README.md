@@ -26,6 +26,7 @@ Place the social image at `public/og.jpg` and replace the placeholder when ready
    - Build command: `npm run build`
    - Build output directory: `dist`
    - Root directory: `/`
+   - Deploy command: leave blank (Cloudflare Pages handles deploys automatically)
 4. Deploy. Cloudflare will auto-build on every push to `main`.
 
 Optional: `wrangler.jsonc` is included with `pages_build_output_dir` set to `./dist`.
